@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -12,76 +13,60 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#050816]/80 backdrop-blur-2xl">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="h-20 flex items-center justify-between">
+    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur-xl">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-8">
+        <div className="flex h-24 items-center justify-between">
 
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-4 group"
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-cyan-500/30 blur-xl rounded-2xl" />
-
-              <div className="relative h-12 w-12 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white text-lg font-bold">
-                A
-              </div>
-            </div>
-
-            <div>
-              <h1 className="text-xl font-bold text-white">
-                Agency
-              </h1>
-
-              <p className="text-xs text-slate-400">
-                Digital Marketing Institute
-              </p>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Agency Logo"
+              width={180}
+              height={50}
+              priority
+              className="h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-12">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="group relative text-[15px] font-medium text-slate-300 transition-all duration-300 hover:text-cyan-400"
+                className="group relative text-[15px] font-semibold tracking-tight text-slate-600 transition-colors duration-300 hover:text-blue-600"
               >
                 {item.name}
 
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-cyan-400 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </nav>
 
-          {/* CTA */}
+          {/* CTA Button */}
           <Link
             href="/contact"
             className="
-              group
-              relative
-              overflow-hidden
+              inline-flex
+              items-center
+              justify-center
               rounded-xl
-              bg-gradient-to-r
-              from-cyan-500
-              to-blue-600
+              bg-sky-500
               px-6
               py-3
+              text-sm
               font-semibold
               text-white
-              shadow-[0_10px_30px_rgba(6,182,212,0.25)]
+              shadow-lg
               transition-all
               duration-300
-              hover:-translate-y-1
-              hover:shadow-[0_15px_40px_rgba(6,182,212,0.4)]
+              hover:-translate-y-0.5
+              hover:bg-blue-700
+              hover:shadow-xl
             "
           >
-            <span className="relative z-10">
-              Start Learning
-            </span>
-
-            <span className="absolute inset-0 translate-y-full bg-cyan-700 transition-transform duration-300 group-hover:translate-y-0" />
+            Get Started
           </Link>
 
         </div>
