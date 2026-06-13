@@ -5,6 +5,7 @@ import WhyChooseViptroSection from "@/components/Home/WhyChooseViptroSection";
 import TargetAudienceSection from "@/components/Home/TargetAudienceSection";
 import MasterclassCTASection from "@/components/Home/MasterclassCTASection";
 import Navbar from "@/components/Home/Navbar";
+import CourseModulesSection from "@/components/Home/CourseModulesSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WhyChooseViptroSection />
       <TargetAudienceSection />
       <MasterclassCTASection />
+      <CourseModulesSection />
     </>
   );
 }

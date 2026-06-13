@@ -1,96 +1,107 @@
 export default function WhyChooseViptroSection() {
   const features = [
     {
-      icon: "📡",
-      title: "Live Classes",
+      icon: "🎓",
+      title: "Expert Mentors",
       description:
-        "Learn directly from experts in real-time interactive sessions.",
+        "Learn from industry professionals with 10+ years of real-world experience.",
     },
     {
-      icon: "💡",
-      title: "Practical Learning",
+      icon: "⚡",
+      title: "Live Projects",
       description:
-        "Apply what you learn instantly with hands-on training.",
+        "Build a portfolio with hands-on projects that simulate real client work.",
     },
     {
       icon: "💬",
-      title: "Live Q&A",
+      title: "24/7 Doubt Support",
       description:
-        "Get your doubts cleared instantly by industry mentors.",
+        "Get instant help via dedicated Slack/Discord channels – no waiting.",
     },
     {
       icon: "🤝",
-      title: "Community Access",
+      title: "Peer Community",
       description:
-        "Be part of an active learner group to grow and collaborate.",
+        "Join a growing network of learners to collaborate, share, and grow together.",
     },
     {
-      icon: "📈",
-      title: "Result Driven",
+      icon: "📊",
+      title: "Career Tracking",
       description:
-        "Focused training designed to deliver measurable success.",
+        "Monitor your progress with personalized dashboards and weekly feedback.",
     },
     {
       icon: "🎯",
-      title: "Mentor Support",
+      title: "1:1 Mentorship",
       description:
-        "Personalized guidance at every step of your journey.",
+        "Monthly one-on-one sessions to align learning with your career goals.",
     },
     {
       icon: "🤖",
-      title: "AI Integrated",
+      title: "AI Tools Mastery",
       description:
-        "Master powerful AI tools and stay ahead of the competition.",
+        "Hands-on training with ChatGPT, Midjourney, and automation tools.",
     },
     {
       icon: "🏆",
-      title: "Certification",
+      title: "Verified Certificate",
       description:
-        "Receive an industry-recognized certificate upon completion.",
+        "Earn a blockchain-verified certificate that recruiters trust.",
     },
   ];
 
   return (
-    <section className="bg-[#050816] py-24 px-6">
+    <section className="bg-white py-20 md:py-28 px-6">
       <div className="max-w-7xl mx-auto">
-
-        <h2 className="text-center text-5xl md:text-7xl font-bold text-white mb-16">
+        {/* Section Heading */}
+        <h2 className="text-center text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
           Why Viptro?
         </h2>
+        <p className="text-center text-gray-500 max-w-2xl mx-auto mb-14 text-lg">
+          Everything you need to launch or accelerate your digital career
+        </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((item, index) => (
             <div
               key={index}
               className="
-                bg-[#0B1120]
-                border
-                border-slate-800
-                rounded-3xl
-                p-8
+                bg-white
+                border border-gray-100
+                rounded-2xl
+                p-6
                 text-center
                 transition-all
-                duration-500
-                hover:-translate-y-3
-                hover:border-blue-500
-                hover:shadow-[0_20px_50px_rgba(37,99,235,0.25)]
+                duration-300
+                hover:-translate-y-2
+                hover:border-blue-200
+                hover:shadow-xl
+                hover:shadow-blue-100/50
               "
             >
-              <div className="text-6xl mb-6">
+              {/* Icon */}
+              <div className="text-5xl mb-4">
                 {item.icon}
               </div>
 
-              <h3 className="text-white text-3xl font-bold mb-4">
+              {/* Title */}
+              <h3 className="text-gray-800 text-xl font-bold mb-2">
                 {item.title}
               </h3>
 
-              <p className="text-slate-400 text-lg leading-relaxed">
+              {/* Description */}
+              <p className="text-gray-500 text-sm leading-relaxed">
                 {item.description}
               </p>
             </div>
           ))}
         </div>
 
+        {/* Trust badge */}
+        <div className="text-center mt-12 text-sm text-gray-400">
+          ⭐ 4.9/5 · Trusted by 5,000+ graduates · 85% placement assistance
+        </div>
       </div>
     </section>
   );
