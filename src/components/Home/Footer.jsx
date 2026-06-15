@@ -122,7 +122,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-10 sm:mt-12 pt-6 border-t border-white/10 text-center text-sm text-gray-400">
-          <p>© {currentYear} Viptro Technologies Pvt Ltd. All Rights Reserved.</p>
+          <p>© {currentYear} Viptro Technologies Pvt Ltd. All Rights Reserved</p>
         </div>
       </div>
     </footer>
